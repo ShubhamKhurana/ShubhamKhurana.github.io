@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: whitesmoke;">
+
+        <img src="data:image/png;base64,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" width="124" height="45"
+            class="d-inline-block align-top" alt="">
+        Sudoku Solver Practice Project by Shubham Khurana
+
+    </nav>
+    <br><br>
+    <div id="container">
+
+        <div class="lsb tsb" id="0">
+
+        </div>
+
+        <div class="tsb ldb" id="1">
+
+        </div>
+
+        <div class="tsb ldb" id="2">
+
+        </div>
+
+        <div class="tsb lsb" id="3">
+
+        </div>
+        <div class="tsb ldb" id="4">
+
+        </div>
+
+        <div class="tsb ldb" id="5">
+
+        </div>
+        <div class="tsb lsb" id="6">
+
+        </div>
+
+        <div class="tsb ldb" id="7">
+
+        </div>
+        <div class="tsb rsb ldb" id="8">
+
+        </div>
+
+        <div class="lsb tdb" id="9">
+
+        </div>
+
+        <div class="ldb tdb" id="10">
+
+        </div>
+
+        <div class="ldb tdb" id="11">
+
+        </div>
+
+        <div class="lsb tdb" id="12">
+
+        </div>
+        <div class="ldb tdb" id="13">
+
+        </div>
+
+        <div class="ldb tdb" id="14">
+
+        </div>
+        <div class="lsb tdb" id="15">
+
+        </div>
+
+        <div class="ldb tdb" id="16">
+
+        </div>
+        <div class="rsb ldb tdb" id="17">
+
+        </div>
+
+        <div class="lsb bsb tdb" id="18">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="19">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="20">
+
+        </div>
+
+        <div class="bsb lsb tdb" id="21">
+
+        </div>
+        <div class="bsb ldb tdb" id="22">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="23">
+
+        </div>
+        <div class="bsb lsb tdb" id="24">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="25">
+
+        </div>
+        <div class="bsb rsb ldb tdb" id="26">
+
+        </div>
+
+        <div class="lsb" id="27">
+
+        </div>
+
+        <div class="ldb" id="28">
+
+        </div>
+
+        <div class="ldb" id="29">
+
+        </div>
+
+        <div class="lsb" id="30">
+
+        </div>
+        <div class="ldb" id="31">
+
+        </div>
+
+        <div class="ldb" id="32">
+
+        </div>
+        <div class="lsb" id="33">
+
+        </div>
+
+        <div class="ldb" id="34">
+
+        </div>
+        <div class="rsb ldb" id="35">
+
+        </div>
+
+        <div class="lsb tdb" id="36">
+
+        </div>
+
+        <div class="ldb tdb" id="37">
+
+        </div>
+
+        <div class="ldb tdb" id="38">
+        </div>
+
+        <div class="lsb tdb" id="39">
+
+        </div>
+        <div class="ldb tdb" id="40">
+
+        </div>
+
+        <div class="ldb tdb" id="41">
+
+        </div>
+        <div class="lsb tdb" id="42">
+
+        </div>
+
+        <div class="ldb tdb" id="43">
+
+        </div>
+        <div class="rsb ldb tdb" id="44">
+
+        </div>
+
+        <div class="lsb bsb tdb" id="45">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="46">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="47">
+
+        </div>
+
+        <div class="bsb lsb tdb" id="48">
+
+        </div>
+        <div class="bsb ldb tdb" id="49">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="50">
+
+        </div>
+        <div class="bsb lsb tdb" id="51">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="52">
+
+        </div>
+        <div class="bsb rsb ldb tdb" id="53">
+
+        </div>
+
+        <div class="lsb" id="54">
+
+        </div>
+
+        <div class="ldb" id="55">
+
+        </div>
+
+        <div class="ldb" id="56">
+
+        </div>
+
+        <div class="lsb" id="57">
+
+        </div>
+        <div class="ldb" id="58">
+
+        </div class="ldb">
+
+        <div class="ldb" id="59">
+
+        </div>
+        <div class="lsb" id="60">
+
+        </div>
+
+        <div class="ldb" id="61">
+
+        </div>
+        <div class="rsb ldb" id="62">
+
+        </div>
+
+        <div class="lsb tdb" id="63">
+
+        </div>
+
+        <div class="ldb tdb" id="64">
+
+        </div>
+
+        <div class="ldb tdb" id="65">
+
+        </div>
+
+        <div class="lsb tdb" id="66">
+
+        </div>
+        <div class="ldb tdb" id="67">
+
+        </div>
+
+        <div class="ldb tdb" id="68">
+
+        </div>
+        <div class="lsb tdb" id="69">
+
+        </div>
+
+        <div class="ldb tdb" id="70">
+
+        </div>
+        <div class="rsb ldb tdb" id="71">
+
+        </div>
+
+        <div class="lsb bsb tdb" id="72">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="73">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="74">
+
+        </div>
+
+        <div class="bsb lsb tdb" id="75">
+
+        </div>
+        <div class="bsb ldb tdb" id="76">
+
+        </div>
+
+        <div class="bsb tdb ldb" id="77">
+
+        </div>
+        <div class="bsb lsb tdb" id="78">
+
+        </div>
+
+        <div class="bsb ldb tdb" id="79">
+
+        </div>
+        <div class="bsb rsb ldb tdb" id="80">
+
+        </div>
+
+
+    </div>
+    <br>
+    <div id="buttons">
+        <button type="button" class="btn btn-danger" id="generate-sudoku">Get New
+            Puzzle</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" id="solve">Solve</button>
+    </div>
+</body>
+
+</html>
