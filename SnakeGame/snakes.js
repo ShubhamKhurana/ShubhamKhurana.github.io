@@ -1,7 +1,6 @@
 //Game Loop - Init, Draw, Update
 
 //localStorageFunctionality can't be added here, because that's a chrome extension, can run on a browser only
-highest_score = 0;
 
 function getRandomFood(){
 	var foodX = Math.round(Math.random()*(W-10)/10);
@@ -22,6 +21,8 @@ function getRandomFood(){
 
 function init(){
 	//console.log("init");
+	highest_score = 0;
+	
 	canvas = document.getElementById('mycanvas');
 	pen = canvas.getContext('2d');
 	W = canvas.width;
