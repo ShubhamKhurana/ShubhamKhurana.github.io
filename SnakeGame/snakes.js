@@ -21,7 +21,6 @@ function getRandomFood(){
 
 function init(){
 	//console.log("init");
-	highest_score = 0;
 	
 	canvas = document.getElementById('mycanvas');
 	pen = canvas.getContext('2d');
@@ -116,9 +115,6 @@ function init(){
 
 			if(this.cells[0].y < 0 || this.cells[0].x < 0 ||
 				this.cells[0].y > last_y || this.cells[0].x > last_x){
-				if(score > highest_score){
-					highest_score = score;
-				}
 				alert("Gameover");
 				game_over = true;
 			}
@@ -160,7 +156,7 @@ function draw(){
 	pen.fillStyle = "white";
 	pen.font = "14px Roboto";
 	pen.fillText("Score: " + score, 10, 10);
-	pen.fillText("Highest Score " + highest_score, 100, 10);
+	//pen.fillText("Highest Score " + highest_score, 100, 10);
 
 }
 
