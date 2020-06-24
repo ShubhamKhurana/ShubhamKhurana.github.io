@@ -1,5 +1,8 @@
 //Game Loop - Init, Draw, Update
 
+//localStorageFunctionality can't be added here, because that's a chrome extension, can run on a browser only
+highest_score = 0;
+
 function getRandomFood(){
 	var foodX = Math.round(Math.random()*(W-10)/10);
 	var foodY = Math.round(Math.random()*(H-10)/10);
@@ -112,11 +115,8 @@ function init(){
 
 			if(this.cells[0].y < 0 || this.cells[0].x < 0 ||
 				this.cells[0].y > last_y || this.cells[0].x > last_x){
-				if(localStorage.Highest_score === 'undefined'){
-					localStorage.Highest_score = score;
-				}
-				else if(score > localStorage.Highest_score){
-					localStorage.Highest_score = score;
+				if(score > highest_score){
+					highest_score = score;
 				}
 				alert("Gameover");
 				game_over = true;
@@ -159,7 +159,7 @@ function draw(){
 	pen.fillStyle = "white";
 	pen.font = "14px Roboto";
 	pen.fillText("Score: " + score, 10, 10);
-	pen.fillText("Highest Score " + localStorage.Highest_score, 100, 10);
+	pen.fillText("Highest Score " + highest_score, 100, 10);
 
 }
 
