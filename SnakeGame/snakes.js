@@ -112,7 +112,10 @@ function init(){
 
 			if(this.cells[0].y < 0 || this.cells[0].x < 0 ||
 				this.cells[0].y > last_y || this.cells[0].x > last_x){
-				if(score > localStorage.Highest_score){
+				if(localStorage.Highest_score === 'undefined'){
+					localStorage.Highest_score = score;
+				}
+				else if(score > localStorage.Highest_score){
 					localStorage.Highest_score = score;
 				}
 				alert("Gameover");
